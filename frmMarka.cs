@@ -16,5 +16,16 @@ namespace Market_Satis
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            baglanti.open();
+            SqlCommand komut = new SqlCommand("insert into markabilgileri(kategori,marka) values('"+comboBox1.Text+"','" + textBox1.Text + "')", baglanti);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            textBox1.Text = "";
+            comboBox1.Text = "";
+            MessageBox.Show("Marka eklendi");
+        }
     }
 }

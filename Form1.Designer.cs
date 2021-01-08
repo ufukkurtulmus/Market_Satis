@@ -53,6 +53,8 @@ namespace Market_Satis
             this.btnSatisYap = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnSatisIptal = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -223,7 +225,7 @@ namespace Market_Satis
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(45, 100);
+            this.button2.Location = new System.Drawing.Point(45, 91);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 58);
@@ -234,17 +236,18 @@ namespace Market_Satis
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(45, 178);
+            this.button3.Location = new System.Drawing.Point(45, 167);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 58);
             this.button3.TabIndex = 5;
             this.button3.Text = "Ürün Kayıt";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(45, 257);
+            this.button4.Location = new System.Drawing.Point(45, 243);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(131, 58);
@@ -254,7 +257,7 @@ namespace Market_Satis
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(45, 336);
+            this.button5.Location = new System.Drawing.Point(45, 319);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(131, 58);
@@ -302,12 +305,36 @@ namespace Market_Satis
             this.btnSatisIptal.Text = "Satış İptal";
             this.btnSatisIptal.UseVisualStyleBackColor = true;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(45, 395);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(131, 58);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "Kategori";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(45, 471);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(131, 58);
+            this.button7.TabIndex = 13;
+            this.button7.Text = "Marka";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.btnSatisIptal);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnSatisYap);
@@ -359,6 +386,8 @@ namespace Market_Satis
         private System.Windows.Forms.Button btnSatisYap;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnSatisIptal;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 

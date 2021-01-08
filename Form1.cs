@@ -33,5 +33,23 @@ namespace Market_Satis
             musteriListele listele = new musteriListele();
             listele.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmUrunEkleme ekle = new frmUrunEkleme();
+            ekle.ShowDialog(); 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmKategori kategori = new frmKategori();
+            kategori.ShowDialog(); 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmMarka marka = new frmMarka();
+            marka.ShowDialog();
+        }
     }
 }
