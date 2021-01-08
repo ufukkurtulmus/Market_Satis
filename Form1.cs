@@ -36,7 +36,7 @@ namespace Market_Satis
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmUrunEkleme ekle = new frmUrunEkleme();
+            frmUrunEkle ekle = new frmUrunEkle();
             ekle.ShowDialog(); 
         }
 

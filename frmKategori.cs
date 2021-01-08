@@ -17,6 +17,25 @@ namespace Market_Satis
             InitializeComponent();
         }
 
+        bool durum;
+
+        private void kategorikontrol() 
+        {
+            durum = true;
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select *from kategoribilgileri",baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                if (textBox1.Text == read["kategori"].ToString() || textBox1.Text=="") 
+                {
+                    durum = false;                
+                }
+            }
+            baglanti.Close();
+
+        }
+
         private void frmKategori_Load(object sender, EventArgs e)
         {
 
@@ -24,12 +43,21 @@ namespace Market_Satis
 
         private void button1_Click(object sender, EventArgs e)
         {
-            baglanti.open();
+            kategorikontrol();
+            if(durum==true)
+            { 
+            baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into kategoribilgileri(kategori) values('" + textBox1.Text+ "')", baglanti);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            textBox1.Text = "";
             MessageBox.Show("Kategori eklendi");  
+             }
+            else 
+            {
+                MessageBox.Show("Böyle bir kategori var","Uyarı");
+            }
+            textBox1.Text = "";
         }
     }
 }
+ 

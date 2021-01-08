@@ -1,7 +1,7 @@
 ﻿
 namespace Market_Satis
 {
-    partial class frmUrunEkleme
+    partial class frmUrunEkle
     {
         /// <summary>
         /// Required designer variable.
@@ -400,7 +400,7 @@ namespace Market_Satis
             this.lblMiktari.Size = new System.Drawing.Size(0, 17);
             this.lblMiktari.TabIndex = 21;
             // 
-            // frmUrunEkleme
+            // frmUrunEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -409,7 +409,7 @@ namespace Market_Satis
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frmUrunEkleme";
+            this.Name = "frmUrunEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Urun Ekleme Sayfasi";
             this.Load += new System.EventHandler(this.frmUrunEkleme_Load);

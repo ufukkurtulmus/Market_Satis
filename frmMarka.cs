@@ -16,16 +16,44 @@ namespace Market_Satis
         {
             InitializeComponent();
         }
+        bool durum;
 
+        private void markakontrol()
+        {
+            durum = true;
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select *from markabilgileri", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                if (comboBox1.Text==read["kategori"].ToString() && textBox1.Text == read["marka"].ToString() || comboBox1.Text=="" || textBox1.Text == "")
+                {
+                    durum = false;
+                }
+            }
+            baglanti.Close();
+
+        } 
         private void button1_Click(object sender, EventArgs e)
         {
-            baglanti.open();
+            markakontrol();
+            if(durum==true)
+            {
+            baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into markabilgileri(kategori,marka) values('"+comboBox1.Text+"','" + textBox1.Text + "')", baglanti);
             komut.ExecuteNonQuery();
-            baglanti.Close();
+            baglanti.Close(); 
+            MessageBox.Show("Marka eklendi");
+
+            }
+            else 
+            {
+                MessageBox.Show("Böyle bir kategori ve marka var", "Uyarı");
+            }
+            
             textBox1.Text = "";
             comboBox1.Text = "";
-            MessageBox.Show("Marka eklendi");
+           
         }
         private void kategorigetir() 
         {    

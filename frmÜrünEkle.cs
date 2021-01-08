@@ -10,12 +10,34 @@ using System.Windows.Forms;
 
 namespace Market_Satis
 {
-    public partial class frmUrunEkleme : Form
+    public partial class frmUrunEkle : Form
     {
-        public frmUrunEkleme()
+        public frmUrunEkle()
         {
             InitializeComponent();
         }
+
+
+        bool durum;
+
+        private void barkodkontrol()
+        {
+            durum = true;
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select *from urun", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                if (txtBarkodNo.Text == read["barkodno"].ToString() || txtBarkodNo.Text=="")
+                {
+                    durum = false;
+                }
+            }
+            baglanti.Close();
+
+        }
+
+
         private void kategorigetir()
         {
             baglanti.Open();
@@ -129,6 +151,9 @@ namespace Market_Satis
 
         private void btnYeniEkle_Click(object sender, EventArgs e)
         {
+            barkodkontrol();
+            if(durum==true)
+            { 
             baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into urun(barkodno,kategori,marka,urunadi,miktari,alisfiyati,satisfiyati,tarih) values(@barkodno,@kategori,@marka,@urunadi,@miktari,@alisfiyati,@satisfiyati,@tarih)", baglanti);
             komut.Paremeters.AddWithValue("@barkodno",txtBarkodNo.Text);
@@ -143,6 +168,12 @@ namespace Market_Satis
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Ürün eklendi");
+            } 
+            else 
+            {
+                MessageBox.Show("Böyle bir barkodno var","Uyarı");
+            }
+            
             comboMarka.Items.Clear();
 
             foreach (Control item in groupBox1.Controls) 
