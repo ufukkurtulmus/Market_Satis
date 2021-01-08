@@ -53,7 +53,6 @@ namespace Market_Satis
             this.btnSatisYap = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnSatisIptal = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -303,22 +302,12 @@ namespace Market_Satis
             this.btnSatisIptal.Text = "Satış İptal";
             this.btnSatisIptal.UseVisualStyleBackColor = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(92, 466);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "label7";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSatisIptal);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnSatisYap);
@@ -341,7 +330,6 @@ namespace Market_Satis
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -371,7 +359,6 @@ namespace Market_Satis
         private System.Windows.Forms.Button btnSatisYap;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnSatisIptal;
-        private System.Windows.Forms.Label label7;
     }
 }
 
