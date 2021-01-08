@@ -2,10 +2,11 @@ C:\Users\ufuk_\source\repos\Market_Satis\bin\Debug\Market_Satis.exe.config
 C:\Users\ufuk_\source\repos\Market_Satis\bin\Debug\Market_Satis.exe
 C:\Users\ufuk_\source\repos\Market_Satis\bin\Debug\Market_Satis.pdb
 C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.csprojAssemblyReference.cache
-C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.Form1.resources
 C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.Properties.Resources.resources
 C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.csproj.GenerateResource.cache
 C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.csproj.CoreCompileInputs.cache
 C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.exe
 C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.pdb
 C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.musteriKayit.resources
+C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.musteriListele.resources
+C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.Form1.resources

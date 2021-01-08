@@ -31,16 +31,16 @@ namespace Market_Satis
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtUrunFiyat = new System.Windows.Forms.TextBox();
-            this.txtUrunAd = new System.Windows.Forms.TextBox();
+            this.txtSatisFiyati = new System.Windows.Forms.TextBox();
+            this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.txtBarkod = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTelefon = new System.Windows.Forms.TextBox();
-            this.txtisim = new System.Windows.Forms.TextBox();
-            this.txtTC = new System.Windows.Forms.TextBox();
+            this.txtAdSoyad = new System.Windows.Forms.TextBox();
+            this.txtTc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +49,10 @@ namespace Market_Satis
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.btnSatisYap = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnSatisIptal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -64,32 +68,32 @@ namespace Market_Satis
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtUrunFiyat);
-            this.groupBox1.Controls.Add(this.txtUrunAd);
+            this.groupBox1.Controls.Add(this.txtSatisFiyati);
+            this.groupBox1.Controls.Add(this.txtUrunAdi);
             this.groupBox1.Controls.Add(this.txtBarkod);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(412, 338);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(376, 100);
+            this.groupBox1.Size = new System.Drawing.Size(226, 100);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
             // 
-            // txtUrunFiyat
+            // txtSatisFiyati
             // 
-            this.txtUrunFiyat.Location = new System.Drawing.Point(108, 66);
-            this.txtUrunFiyat.Name = "txtUrunFiyat";
-            this.txtUrunFiyat.Size = new System.Drawing.Size(100, 20);
-            this.txtUrunFiyat.TabIndex = 5;
+            this.txtSatisFiyati.Location = new System.Drawing.Point(108, 66);
+            this.txtSatisFiyati.Name = "txtSatisFiyati";
+            this.txtSatisFiyati.Size = new System.Drawing.Size(100, 20);
+            this.txtSatisFiyati.TabIndex = 5;
             // 
-            // txtUrunAd
+            // txtUrunAdi
             // 
-            this.txtUrunAd.Location = new System.Drawing.Point(108, 42);
-            this.txtUrunAd.Name = "txtUrunAd";
-            this.txtUrunAd.Size = new System.Drawing.Size(100, 20);
-            this.txtUrunAd.TabIndex = 4;
+            this.txtUrunAdi.Location = new System.Drawing.Point(108, 42);
+            this.txtUrunAdi.Name = "txtUrunAdi";
+            this.txtUrunAdi.Size = new System.Drawing.Size(100, 20);
+            this.txtUrunAdi.TabIndex = 4;
             // 
             // txtBarkod
             // 
@@ -103,9 +107,9 @@ namespace Market_Satis
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 70);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 13);
+            this.label6.Size = new System.Drawing.Size(84, 13);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Ürün Fiyatı            :";
+            this.label6.Text = "Satış Fiyatı        :";
             // 
             // label5
             // 
@@ -128,8 +132,8 @@ namespace Market_Satis
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtTelefon);
-            this.groupBox2.Controls.Add(this.txtisim);
-            this.groupBox2.Controls.Add(this.txtTC);
+            this.groupBox2.Controls.Add(this.txtAdSoyad);
+            this.groupBox2.Controls.Add(this.txtTc);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
@@ -147,19 +151,19 @@ namespace Market_Satis
             this.txtTelefon.Size = new System.Drawing.Size(100, 20);
             this.txtTelefon.TabIndex = 5;
             // 
-            // txtisim
+            // txtAdSoyad
             // 
-            this.txtisim.Location = new System.Drawing.Point(66, 39);
-            this.txtisim.Name = "txtisim";
-            this.txtisim.Size = new System.Drawing.Size(100, 20);
-            this.txtisim.TabIndex = 4;
+            this.txtAdSoyad.Location = new System.Drawing.Point(66, 39);
+            this.txtAdSoyad.Name = "txtAdSoyad";
+            this.txtAdSoyad.Size = new System.Drawing.Size(100, 20);
+            this.txtAdSoyad.TabIndex = 4;
             // 
-            // txtTC
+            // txtTc
             // 
-            this.txtTC.Location = new System.Drawing.Point(66, 13);
-            this.txtTC.Name = "txtTC";
-            this.txtTC.Size = new System.Drawing.Size(100, 20);
-            this.txtTC.TabIndex = 3;
+            this.txtTc.Location = new System.Drawing.Point(66, 13);
+            this.txtTc.Name = "txtTc";
+            this.txtTc.Size = new System.Drawing.Size(100, 20);
+            this.txtTc.TabIndex = 3;
             // 
             // label3
             // 
@@ -206,6 +210,7 @@ namespace Market_Satis
             this.button2.TabIndex = 4;
             this.button2.Text = "Müşteri Listele";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -234,12 +239,52 @@ namespace Market_Satis
             this.button5.Text = "Satılan Ürünler";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // btnEkle
+            // 
+            this.btnEkle.Location = new System.Drawing.Point(644, 338);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnEkle.TabIndex = 8;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            // 
+            // btnSatisYap
+            // 
+            this.btnSatisYap.Location = new System.Drawing.Point(725, 338);
+            this.btnSatisYap.Name = "btnSatisYap";
+            this.btnSatisYap.Size = new System.Drawing.Size(75, 23);
+            this.btnSatisYap.TabIndex = 9;
+            this.btnSatisYap.Text = "Satış Yap";
+            this.btnSatisYap.UseVisualStyleBackColor = true;
+            // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(644, 367);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.TabIndex = 10;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            // 
+            // btnSatisIptal
+            // 
+            this.btnSatisIptal.Location = new System.Drawing.Point(725, 367);
+            this.btnSatisIptal.Name = "btnSatisIptal";
+            this.btnSatisIptal.Size = new System.Drawing.Size(75, 23);
+            this.btnSatisIptal.TabIndex = 11;
+            this.btnSatisIptal.Text = "Satış İptal";
+            this.btnSatisIptal.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSatisIptal);
+            this.Controls.Add(this.btnSil);
+            this.Controls.Add(this.btnSatisYap);
+            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -250,6 +295,7 @@ namespace Market_Satis
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -266,8 +312,8 @@ namespace Market_Satis
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtTelefon;
-        private System.Windows.Forms.TextBox txtisim;
-        private System.Windows.Forms.TextBox txtTC;
+        private System.Windows.Forms.TextBox txtAdSoyad;
+        private System.Windows.Forms.TextBox txtTc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -276,11 +322,15 @@ namespace Market_Satis
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox txtUrunFiyat;
-        private System.Windows.Forms.TextBox txtUrunAd;
+        private System.Windows.Forms.TextBox txtSatisFiyati;
+        private System.Windows.Forms.TextBox txtUrunAdi;
         private System.Windows.Forms.TextBox txtBarkod;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.Button btnSatisYap;
+        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnSatisIptal;
     }
 }
 

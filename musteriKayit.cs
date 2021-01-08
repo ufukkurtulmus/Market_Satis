@@ -26,10 +26,10 @@ namespace Market_Satis
         private void button1_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("insert into musteri(TC,isim,telefon)values(@TC,@isim,@telefon)", baglanti);
-            komut.Parameters.AddWithValue("@TC", TC.Text);
-            komut.Parameters.AddWithValue("@isim", isim.Text);
-            komut.Parameters.AddWithValue("@telefon", telefon.Text);
+            SqlCommand komut = new SqlCommand("insert into musteri(tc,adSoyad,telefon)values(@tc,@adSoyad,@telefon)", baglanti);
+            komut.Parameters.AddWithValue("@tc", txtTc.Text);
+            komut.Parameters.AddWithValue("@adSoyad", txtAdSoyad.Text);
+            komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Kayıt Gerçekleştirildi.");

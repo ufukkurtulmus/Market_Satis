@@ -32,10 +32,10 @@ namespace Market_Satis
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TC = new System.Windows.Forms.TextBox();
-            this.isim = new System.Windows.Forms.TextBox();
-            this.telefon = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtTc = new System.Windows.Forms.TextBox();
+            this.txtAdSoyad = new System.Windows.Forms.TextBox();
+            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.btnKayit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -65,37 +65,37 @@ namespace Market_Satis
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefon    :";
             // 
-            // TC
+            // txtTc
             // 
-            this.TC.Location = new System.Drawing.Point(88, 27);
-            this.TC.Name = "TC";
-            this.TC.Size = new System.Drawing.Size(116, 20);
-            this.TC.TabIndex = 3;
+            this.txtTc.Location = new System.Drawing.Point(88, 27);
+            this.txtTc.Name = "txtTc";
+            this.txtTc.Size = new System.Drawing.Size(116, 20);
+            this.txtTc.TabIndex = 3;
             // 
-            // isim
+            // txtAdSoyad
             // 
-            this.isim.Location = new System.Drawing.Point(88, 62);
-            this.isim.Name = "isim";
-            this.isim.Size = new System.Drawing.Size(116, 20);
-            this.isim.TabIndex = 4;
+            this.txtAdSoyad.Location = new System.Drawing.Point(88, 62);
+            this.txtAdSoyad.Name = "txtAdSoyad";
+            this.txtAdSoyad.Size = new System.Drawing.Size(116, 20);
+            this.txtAdSoyad.TabIndex = 4;
             // 
-            // telefon
+            // txtTelefon
             // 
-            this.telefon.Location = new System.Drawing.Point(88, 98);
-            this.telefon.Name = "telefon";
-            this.telefon.Size = new System.Drawing.Size(116, 20);
-            this.telefon.TabIndex = 5;
+            this.txtTelefon.Location = new System.Drawing.Point(88, 98);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(116, 20);
+            this.txtTelefon.TabIndex = 5;
             // 
-            // button1
+            // btnKayit
             // 
-            this.button1.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.button1.Location = new System.Drawing.Point(101, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 28);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Kaydet";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnKayit.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnKayit.Location = new System.Drawing.Point(101, 136);
+            this.btnKayit.Name = "btnKayit";
+            this.btnKayit.Size = new System.Drawing.Size(78, 28);
+            this.btnKayit.TabIndex = 6;
+            this.btnKayit.Text = "Kaydet";
+            this.btnKayit.UseVisualStyleBackColor = false;
+            this.btnKayit.Click += new System.EventHandler(this.button1_Click);
             // 
             // musteriKayit
             // 
@@ -103,10 +103,10 @@ namespace Market_Satis
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(253, 193);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.telefon);
-            this.Controls.Add(this.isim);
-            this.Controls.Add(this.TC);
+            this.Controls.Add(this.btnKayit);
+            this.Controls.Add(this.txtTelefon);
+            this.Controls.Add(this.txtAdSoyad);
+            this.Controls.Add(this.txtTc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -123,9 +123,9 @@ namespace Market_Satis
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TC;
-        private System.Windows.Forms.TextBox isim;
-        private System.Windows.Forms.TextBox telefon;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtTc;
+        private System.Windows.Forms.TextBox txtAdSoyad;
+        private System.Windows.Forms.TextBox txtTelefon;
+        private System.Windows.Forms.Button btnKayit;
     }
 }
