@@ -52,6 +52,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKategori.Designer.cs">
+      <DependentUpon>frmKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarka.Designer.cs">
+      <DependentUpon>frmMarka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmÜrün.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmÜrün.Designer.cs">
+      <DependentUpon>frmÜrün.cs</DependentUpon>
+    </Compile>
     <Compile Include="musteriKayit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +86,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKategori.resx">
+      <DependentUpon>frmKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarka.resx">
+      <DependentUpon>frmMarka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmÜrün.resx">
+      <DependentUpon>frmÜrün.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="musteriKayit.resx">
       <DependentUpon>musteriKayit.cs</DependentUpon>
