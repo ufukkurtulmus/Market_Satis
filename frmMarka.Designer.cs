@@ -94,6 +94,7 @@ namespace Market_Satis
             this.Name = "frmMarka";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marka Sayfasi";
+            this.Load += new System.EventHandler(this.frmMarka_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

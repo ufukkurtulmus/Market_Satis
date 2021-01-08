@@ -64,11 +64,11 @@
     <Compile Include="frmMarka.Designer.cs">
       <DependentUpon>frmMarka.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmÜrün.cs">
+    <Compile Include="frmÜrünEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmÜrün.Designer.cs">
-      <DependentUpon>frmÜrün.cs</DependentUpon>
+    <Compile Include="frmÜrünEkle.Designer.cs">
+      <DependentUpon>frmÜrünEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="musteriKayit.cs">
       <SubType>Form</SubType>
@@ -93,8 +93,8 @@
     <EmbeddedResource Include="frmMarka.resx">
       <DependentUpon>frmMarka.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmÜrün.resx">
-      <DependentUpon>frmÜrün.cs</DependentUpon>
+    <EmbeddedResource Include="frmÜrünEkle.resx">
+      <DependentUpon>frmÜrünEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="musteriKayit.resx">
       <DependentUpon>musteriKayit.cs</DependentUpon>

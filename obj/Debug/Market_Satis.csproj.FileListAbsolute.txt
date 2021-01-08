@@ -22,3 +22,6 @@ C:\Users\AKIN-Pc\Source\Repos\Market_Satis\obj\Debug\Market_Satis.csproj.Generat
 C:\Users\AKIN-Pc\Source\Repos\Market_Satis\obj\Debug\Market_Satis.csproj.CoreCompileInputs.cache
 C:\Users\AKIN-Pc\Source\Repos\Market_Satis\obj\Debug\Market_Satis.exe
 C:\Users\AKIN-Pc\Source\Repos\Market_Satis\obj\Debug\Market_Satis.pdb
+C:\Users\AKIN-Pc\source\repos\Market_Satis\obj\Debug\Market_Satis.frmKategori.resources
+C:\Users\AKIN-Pc\source\repos\Market_Satis\obj\Debug\Market_Satis.frmMarka.resources
+C:\Users\AKIN-Pc\source\repos\Market_Satis\obj\Debug\Market_Satis.frmUrunEkleme.resources

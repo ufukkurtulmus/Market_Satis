@@ -27,5 +27,20 @@ namespace Market_Satis
             comboBox1.Text = "";
             MessageBox.Show("Marka eklendi");
         }
+        private void kategorigetir() 
+        {    
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select *from kategoribilgileri", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while(read.Read())
+            {
+                comboBox1.Items.Add(read["kategori"].ToString());
+            }
+            baglanti.Close();
+        }
+        private void frmMarka_Load(object sender, EventArgs e)
+        {
+            kategorigetir();
+        }
     }
 }

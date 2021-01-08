@@ -16,10 +16,20 @@ namespace Market_Satis
         {
             InitializeComponent();
         }
-
+        private void kategorigetir()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select *from kategoribilgileri", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                comboKategori.Items.Add(read["kategori"].ToString());
+            }
+            baglanti.Close();
+        }
         private void frmUrunEkleme_Load(object sender, EventArgs e)
         {
-
+            kategorigetir();
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -58,6 +68,11 @@ namespace Market_Satis
         }
 
         private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVarOlanaEkle_Click(object sender, EventArgs e)
         {
 
         }
