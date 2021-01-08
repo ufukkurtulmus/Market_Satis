@@ -61,6 +61,7 @@ namespace Market_Satis
             this.Markatxt = new System.Windows.Forms.TextBox();
             this.Kategoritxt = new System.Windows.Forms.TextBox();
             this.BarkodNotxt = new System.Windows.Forms.TextBox();
+            this.lblMiktari = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -83,8 +84,10 @@ namespace Market_Satis
             this.groupBox1.Controls.Add(this.txtUrunAdi);
             this.groupBox1.Controls.Add(this.txtBarkodNo);
             this.groupBox1.Location = new System.Drawing.Point(60, 43);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(250, 390);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(251, 390);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Yeni Urun";
@@ -101,12 +104,14 @@ namespace Market_Satis
             // btnYeniEkle
             // 
             this.btnYeniEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnYeniEkle.Location = new System.Drawing.Point(122, 347);
+            this.btnYeniEkle.Location = new System.Drawing.Point(123, 347);
+            this.btnYeniEkle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnYeniEkle.Name = "btnYeniEkle";
             this.btnYeniEkle.Size = new System.Drawing.Size(75, 23);
             this.btnYeniEkle.TabIndex = 2;
             this.btnYeniEkle.Text = "Ekle";
             this.btnYeniEkle.UseVisualStyleBackColor = false;
+            this.btnYeniEkle.Click += new System.EventHandler(this.btnYeniEkle_Click);
             // 
             // label6
             // 
@@ -120,7 +125,7 @@ namespace Market_Satis
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 221);
+            this.label5.Location = new System.Drawing.Point(43, 222);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 17);
             this.label5.TabIndex = 11;
@@ -147,7 +152,7 @@ namespace Market_Satis
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 98);
+            this.label2.Location = new System.Drawing.Point(29, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 8;
@@ -166,6 +171,7 @@ namespace Market_Satis
             // 
             this.comboMarka.FormattingEnabled = true;
             this.comboMarka.Location = new System.Drawing.Point(97, 139);
+            this.comboMarka.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboMarka.Name = "comboMarka";
             this.comboMarka.Size = new System.Drawing.Size(100, 24);
             this.comboMarka.TabIndex = 6;
@@ -174,13 +180,16 @@ namespace Market_Satis
             // 
             this.comboKategori.FormattingEnabled = true;
             this.comboKategori.Location = new System.Drawing.Point(97, 97);
+            this.comboKategori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboKategori.Name = "comboKategori";
             this.comboKategori.Size = new System.Drawing.Size(100, 24);
             this.comboKategori.TabIndex = 5;
+            this.comboKategori.SelectedIndexChanged += new System.EventHandler(this.comboKategori_SelectedIndexChanged);
             // 
             // txtSatisFiyati
             // 
-            this.txtSatisFiyati.Location = new System.Drawing.Point(97, 301);
+            this.txtSatisFiyati.Location = new System.Drawing.Point(97, 302);
+            this.txtSatisFiyati.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSatisFiyati.Name = "txtSatisFiyati";
             this.txtSatisFiyati.Size = new System.Drawing.Size(100, 22);
             this.txtSatisFiyati.TabIndex = 4;
@@ -188,13 +197,15 @@ namespace Market_Satis
             // txtAlisFiyati
             // 
             this.txtAlisFiyati.Location = new System.Drawing.Point(97, 261);
+            this.txtAlisFiyati.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAlisFiyati.Name = "txtAlisFiyati";
             this.txtAlisFiyati.Size = new System.Drawing.Size(100, 22);
             this.txtAlisFiyati.TabIndex = 3;
             // 
             // txtMiktari
             // 
-            this.txtMiktari.Location = new System.Drawing.Point(97, 221);
+            this.txtMiktari.Location = new System.Drawing.Point(97, 222);
+            this.txtMiktari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMiktari.Name = "txtMiktari";
             this.txtMiktari.Size = new System.Drawing.Size(100, 22);
             this.txtMiktari.TabIndex = 2;
@@ -202,6 +213,7 @@ namespace Market_Satis
             // txtUrunAdi
             // 
             this.txtUrunAdi.Location = new System.Drawing.Point(97, 181);
+            this.txtUrunAdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUrunAdi.Name = "txtUrunAdi";
             this.txtUrunAdi.Size = new System.Drawing.Size(100, 22);
             this.txtUrunAdi.TabIndex = 1;
@@ -209,12 +221,14 @@ namespace Market_Satis
             // txtBarkodNo
             // 
             this.txtBarkodNo.Location = new System.Drawing.Point(97, 57);
+            this.txtBarkodNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBarkodNo.Name = "txtBarkodNo";
             this.txtBarkodNo.Size = new System.Drawing.Size(100, 22);
             this.txtBarkodNo.TabIndex = 0;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblMiktari);
             this.groupBox2.Controls.Add(this.btnVarOlanaEkle);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
@@ -231,8 +245,10 @@ namespace Market_Satis
             this.groupBox2.Controls.Add(this.Kategoritxt);
             this.groupBox2.Controls.Add(this.BarkodNotxt);
             this.groupBox2.Location = new System.Drawing.Point(376, 53);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(270, 380);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(269, 380);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Var Olan Urun";
@@ -242,6 +258,7 @@ namespace Market_Satis
             // 
             this.btnVarOlanaEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnVarOlanaEkle.Location = new System.Drawing.Point(148, 337);
+            this.btnVarOlanaEkle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVarOlanaEkle.Name = "btnVarOlanaEkle";
             this.btnVarOlanaEkle.Size = new System.Drawing.Size(75, 23);
             this.btnVarOlanaEkle.TabIndex = 3;
@@ -270,7 +287,7 @@ namespace Market_Satis
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(58, 208);
+            this.label10.Location = new System.Drawing.Point(59, 208);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 17);
             this.label10.TabIndex = 18;
@@ -297,7 +314,7 @@ namespace Market_Satis
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(46, 85);
+            this.label13.Location = new System.Drawing.Point(45, 85);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(61, 17);
             this.label13.TabIndex = 15;
@@ -315,6 +332,7 @@ namespace Market_Satis
             // SatisFiyatitxt
             // 
             this.SatisFiyatitxt.Location = new System.Drawing.Point(123, 287);
+            this.SatisFiyatitxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SatisFiyatitxt.Name = "SatisFiyatitxt";
             this.SatisFiyatitxt.Size = new System.Drawing.Size(100, 22);
             this.SatisFiyatitxt.TabIndex = 6;
@@ -323,6 +341,7 @@ namespace Market_Satis
             // AlisFiyatitxt
             // 
             this.AlisFiyatitxt.Location = new System.Drawing.Point(123, 246);
+            this.AlisFiyatitxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AlisFiyatitxt.Name = "AlisFiyatitxt";
             this.AlisFiyatitxt.Size = new System.Drawing.Size(100, 22);
             this.AlisFiyatitxt.TabIndex = 5;
@@ -330,7 +349,8 @@ namespace Market_Satis
             // 
             // Miktaritxt
             // 
-            this.Miktaritxt.Location = new System.Drawing.Point(123, 205);
+            this.Miktaritxt.Location = new System.Drawing.Point(123, 206);
+            this.Miktaritxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Miktaritxt.Name = "Miktaritxt";
             this.Miktaritxt.Size = new System.Drawing.Size(100, 22);
             this.Miktaritxt.TabIndex = 4;
@@ -339,6 +359,7 @@ namespace Market_Satis
             // UrunAditxt
             // 
             this.UrunAditxt.Location = new System.Drawing.Point(123, 164);
+            this.UrunAditxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UrunAditxt.Name = "UrunAditxt";
             this.UrunAditxt.Size = new System.Drawing.Size(100, 22);
             this.UrunAditxt.TabIndex = 3;
@@ -347,6 +368,7 @@ namespace Market_Satis
             // Markatxt
             // 
             this.Markatxt.Location = new System.Drawing.Point(123, 123);
+            this.Markatxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Markatxt.Name = "Markatxt";
             this.Markatxt.Size = new System.Drawing.Size(100, 22);
             this.Markatxt.TabIndex = 2;
@@ -355,6 +377,7 @@ namespace Market_Satis
             // Kategoritxt
             // 
             this.Kategoritxt.Location = new System.Drawing.Point(123, 82);
+            this.Kategoritxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Kategoritxt.Name = "Kategoritxt";
             this.Kategoritxt.Size = new System.Drawing.Size(100, 22);
             this.Kategoritxt.TabIndex = 1;
@@ -363,10 +386,19 @@ namespace Market_Satis
             // BarkodNotxt
             // 
             this.BarkodNotxt.Location = new System.Drawing.Point(123, 41);
+            this.BarkodNotxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BarkodNotxt.Name = "BarkodNotxt";
             this.BarkodNotxt.Size = new System.Drawing.Size(100, 22);
             this.BarkodNotxt.TabIndex = 0;
             this.BarkodNotxt.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
+            // lblMiktari
+            // 
+            this.lblMiktari.AutoSize = true;
+            this.lblMiktari.Location = new System.Drawing.Point(16, 342);
+            this.lblMiktari.Name = "lblMiktari";
+            this.lblMiktari.Size = new System.Drawing.Size(0, 17);
+            this.lblMiktari.TabIndex = 21;
             // 
             // frmUrunEkleme
             // 
@@ -376,6 +408,7 @@ namespace Market_Satis
             this.ClientSize = new System.Drawing.Size(752, 519);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmUrunEkleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Urun Ekleme Sayfasi";
@@ -422,5 +455,6 @@ namespace Market_Satis
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnYeniEkle;
         private System.Windows.Forms.Button btnVarOlanaEkle;
+        private System.Windows.Forms.Label lblMiktari;
     }
 }
