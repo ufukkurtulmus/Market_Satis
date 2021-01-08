@@ -39,7 +39,31 @@ namespace Market_Satis
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            baglanti
+            if (BarkodNotxt.Text=="") 
+            {
+                lblMiktari.Text = ""; 
+                foreach (Control item in groupBox2.Controls) 
+                {
+                   if (item is TextBox )
+                    {
+                        item.Text = "";
+                    }
+                }
+            }
+
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select *from urun where barkodno like '"+BarkodNotxt.Text+"'", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read()) 
+            {
+                Kategoritxt.Text = read["kategori"].ToString();
+                Markatxt.Text = read["marka"].ToString();
+                UrunAditxt.Text = read["urunadi"].ToString();
+                lblMiktari.Text = read["miktari"].ToString();
+                AlisFiyatitxt.Text = read["alisfiyati"].ToString();
+                SatisFiyatitxt.Text = read["satisfiyati"].ToString();
+            }
+            baglanti.Close();
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)
@@ -74,6 +98,18 @@ namespace Market_Satis
 
         private void btnVarOlanaEkle_Click(object sender, EventArgs e)
         {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("update urun set miktari=miktari+'"+int.Parse(Miktaritxt.Text)+"'where barkodno='"+BarkodNotxt.Text+"'",baglanti);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            foreach (Control item in groupBox2.Controls)
+            {
+                if (item is TextBox)
+                {
+                    item.Text = "";
+                }
+            }
+            MessageBox.Show("Var olan ürüne ekleme yapıldı");
 
         }
 
