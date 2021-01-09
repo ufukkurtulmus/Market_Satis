@@ -25,3 +25,16 @@ C:\Users\AKIN-Pc\Source\Repos\Market_Satis\obj\Debug\Market_Satis.pdb
 C:\Users\AKIN-Pc\source\repos\Market_Satis\obj\Debug\Market_Satis.frmKategori.resources
 C:\Users\AKIN-Pc\source\repos\Market_Satis\obj\Debug\Market_Satis.frmMarka.resources
 C:\Users\AKIN-Pc\source\repos\Market_Satis\obj\Debug\Market_Satis.frmUrunEkleme.resources
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.csprojAssemblyReference.cache
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.Form1.resources
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.frmKategori.resources
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.frmMarka.resources
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.frmUrunListele.resources
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.frmUrunEkle.resources
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.musteriKayit.resources
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.musteriListele.resources
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.Properties.Resources.resources
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.csproj.GenerateResource.cache
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.csproj.CoreCompileInputs.cache
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.exe
+C:\Users\Enes\Source\Repos\ufukkurtulmus\Market_Satis\obj\Debug\Market_Satis.pdb

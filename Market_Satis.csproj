@@ -64,6 +64,12 @@
     <Compile Include="frmMarka.Designer.cs">
       <DependentUpon>frmMarka.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUrunListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunListele.Designer.cs">
+      <DependentUpon>frmUrunListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmÜrünEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMarka.resx">
       <DependentUpon>frmMarka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunListele.resx">
+      <DependentUpon>frmUrunListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmÜrünEkle.resx">
       <DependentUpon>frmÜrünEkle.cs</DependentUpon>
