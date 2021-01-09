@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace Market_Satis
             InitializeComponent();
         }
 
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-8UM19B5;Initial Catalog=vtysprojeodev;Integrated Security=True");
 
         bool durum;
 
@@ -156,14 +158,14 @@ namespace Market_Satis
             { 
             baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into urun(barkodno,kategori,marka,urunadi,miktari,alisfiyati,satisfiyati,tarih) values(@barkodno,@kategori,@marka,@urunadi,@miktari,@alisfiyati,@satisfiyati,@tarih)", baglanti);
-            komut.Paremeters.AddWithValue("@barkodno",txtBarkodNo.Text);
-            komut.Paremeters.AddWithValue("@kategori", comboKategori.Text);
-            komut.Paremeters.AddWithValue("@marka", comboMarka.Text);
-            komut.Paremeters.AddWithValue("@urunadi", txtUrunAdi.Text);
-            komut.Paremeters.AddWithValue("@miktari", int.Parse(txtMiktari.Text));
-            komut.Paremeters.AddWithValue("@alisfiyati", double.Parse (txtAlisFiyati.Text));
-            komut.Paremeters.AddWithValue("@satisfiyati", double.Parse(txtSatisFiyati.Text));
-            komut.Paremeters.AddWithValue("@tarih",DateTime.Now.ToString()); 
+            komut.Parameters.AddWithValue("@barkodno",txtBarkodNo.Text);
+            komut.Parameters.AddWithValue("@kategori", comboKategori.Text);
+            komut.Parameters.AddWithValue("@marka", comboMarka.Text);
+            komut.Parameters.AddWithValue("@urunadi", txtUrunAdi.Text);
+            komut.Parameters.AddWithValue("@miktari", int.Parse(txtMiktari.Text));
+            komut.Parameters.AddWithValue("@alisfiyati", double.Parse (txtAlisFiyati.Text));
+            komut.Parameters.AddWithValue("@satisfiyati", double.Parse(txtSatisFiyati.Text));
+            komut.Parameters.AddWithValue("@tarih",DateTime.Now.ToString()); 
             
             komut.ExecuteNonQuery();
             baglanti.Close();
