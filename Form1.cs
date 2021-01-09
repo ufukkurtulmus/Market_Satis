@@ -51,5 +51,11 @@ namespace Market_Satis
             frmMarka marka = new frmMarka();
             marka.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmUrunListele listele = new frmUrunListele();
+            listele.ShowDialog();
+        }
     }
 }

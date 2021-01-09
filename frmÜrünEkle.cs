@@ -190,5 +190,10 @@ namespace Market_Satis
                 }
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
