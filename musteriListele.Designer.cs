@@ -46,18 +46,21 @@ namespace Market_Satis
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(216, 77);
+            this.dataGridView1.Location = new System.Drawing.Point(288, 95);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(416, 285);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(555, 351);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // btnGuncelle
             // 
             this.btnGuncelle.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnGuncelle.Location = new System.Drawing.Point(107, 243);
+            this.btnGuncelle.Location = new System.Drawing.Point(143, 299);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(78, 28);
+            this.btnGuncelle.Size = new System.Drawing.Size(104, 34);
             this.btnGuncelle.TabIndex = 13;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
@@ -65,58 +68,66 @@ namespace Market_Satis
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(94, 205);
+            this.txtTelefon.Location = new System.Drawing.Point(125, 252);
+            this.txtTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(116, 20);
+            this.txtTelefon.Size = new System.Drawing.Size(153, 22);
             this.txtTelefon.TabIndex = 12;
             // 
             // txtAdSoyad
             // 
-            this.txtAdSoyad.Location = new System.Drawing.Point(93, 169);
+            this.txtAdSoyad.Location = new System.Drawing.Point(124, 208);
+            this.txtAdSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAdSoyad.Name = "txtAdSoyad";
-            this.txtAdSoyad.Size = new System.Drawing.Size(116, 20);
+            this.txtAdSoyad.Size = new System.Drawing.Size(153, 22);
             this.txtAdSoyad.TabIndex = 11;
             // 
             // txtTc
             // 
-            this.txtTc.Location = new System.Drawing.Point(94, 134);
+            this.txtTc.Location = new System.Drawing.Point(125, 165);
+            this.txtTc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTc.Name = "txtTc";
-            this.txtTc.Size = new System.Drawing.Size(116, 20);
+            this.txtTc.Size = new System.Drawing.Size(153, 22);
             this.txtTc.TabIndex = 10;
+            this.txtTc.TextChanged += new System.EventHandler(this.txtTc_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 208);
+            this.label3.Location = new System.Drawing.Point(39, 256);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "Telefon    :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 137);
+            this.label2.Location = new System.Drawing.Point(37, 169);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 8;
             this.label2.Text = "T.C.K No  :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 172);
+            this.label1.Location = new System.Drawing.Point(37, 212);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "Ad Soyad :";
             // 
             // btnSil
             // 
             this.btnSil.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnSil.Location = new System.Drawing.Point(107, 277);
+            this.btnSil.Location = new System.Drawing.Point(143, 341);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(75, 30);
+            this.btnSil.Size = new System.Drawing.Size(100, 37);
             this.btnSil.TabIndex = 14;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
@@ -124,27 +135,29 @@ namespace Market_Satis
             // 
             // txtTcAra
             // 
-            this.txtTcAra.Location = new System.Drawing.Point(246, 51);
+            this.txtTcAra.Location = new System.Drawing.Point(328, 63);
+            this.txtTcAra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTcAra.Name = "txtTcAra";
-            this.txtTcAra.Size = new System.Drawing.Size(100, 20);
+            this.txtTcAra.Size = new System.Drawing.Size(132, 22);
             this.txtTcAra.TabIndex = 15;
             this.txtTcAra.TextChanged += new System.EventHandler(this.tcArama_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(213, 54);
+            this.label4.Location = new System.Drawing.Point(284, 66);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.Size = new System.Drawing.Size(34, 17);
             this.label4.TabIndex = 16;
             this.label4.Text = "TC :";
             // 
             // musteriListele
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(662, 378);
+            this.ClientSize = new System.Drawing.Size(883, 465);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTcAra);
             this.Controls.Add(this.btnSil);
@@ -156,6 +169,7 @@ namespace Market_Satis
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "musteriListele";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Müşteri Listele";

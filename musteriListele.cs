@@ -87,5 +87,10 @@ namespace Market_Satis
 
 
         }
+
+        private void txtTc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
