@@ -94,7 +94,7 @@ namespace Market_Satis
         {
             Temizle();
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("select *from urun where barkod like '" + txtBarkod.Text + "'", baglanti);
+            SqlCommand komut = new SqlCommand("select *from urun where barkodno like '" + txtBarkod.Text + "'", baglanti);
             SqlDataReader read = komut.ExecuteReader();
             while (read.Read())
             {
@@ -130,7 +130,7 @@ namespace Market_Satis
             SqlDataReader read = komut.ExecuteReader();
             while (read.Read())
             {
-                if (txtBarkod.Text==read["barkod"].ToString())
+                if (txtBarkod.Text==read["barkodno"].ToString())
                 {
                     durum = false;
                 }
@@ -143,11 +143,11 @@ namespace Market_Satis
             if (durum==true)
             {
                 baglanti.Open();
-                SqlCommand komut = new SqlCommand("insert into sepet(tc,adsoyad,telefon,barkod,urunadi,satisfiyati,tarih) values(@tc,@adsoyad,@telefon,@barkod,@urunadi,@satisfiyati,@tarih) ", baglanti);
+                SqlCommand komut = new SqlCommand("insert into sepet(tc,adsoyad,telefon,barkodno,urunadi,satisfiyati,tarih) values(@tc,@adsoyad,@telefon,@barkodno,@urunadi,@satisfiyati,@tarih) ", baglanti);
                 komut.Parameters.AddWithValue("@tc", txtTc.Text);
                 komut.Parameters.AddWithValue("@adsoyad", txtAdSoyad.Text);
                 komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
-                komut.Parameters.AddWithValue("@barkod", txtBarkod.Text);
+                komut.Parameters.AddWithValue("@barkodno", txtBarkod.Text);
                 komut.Parameters.AddWithValue("@urunadi", txtUrunAdi.Text);
                 komut.Parameters.AddWithValue("@satisfiyati", double.Parse(txtSatisFiyati.Text));
                 komut.Parameters.AddWithValue("@tarih", DateTime.Now.ToString());
@@ -181,7 +181,7 @@ namespace Market_Satis
         private void btnSil_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("delete from sepet where barkod='"+dataGridView1.CurrentRow.Cells["barkod"].Value.ToString()+"'",baglanti);
+            SqlCommand komut = new SqlCommand("delete from sepet where barkodno='"+dataGridView1.CurrentRow.Cells["barkodno"].Value.ToString()+"'",baglanti);
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Urünler sepetten cikarildi");
