@@ -113,7 +113,7 @@ namespace Market_Satis
                 {
                     if (item is TextBox)
                     {
-                        if (true)
+                        if (item!=txtMiktari)
                         {
                             item.Text = "";
                         }
@@ -143,22 +143,26 @@ namespace Market_Satis
             if (durum==true)
             {
                 baglanti.Open();
-                SqlCommand komut = new SqlCommand("insert into sepet(tc,adsoyad,telefon,barkodno,urunadi,satisfiyati,tarih) values(@tc,@adsoyad,@telefon,@barkodno,@urunadi,@satisfiyati,@tarih) ", baglanti);
+                SqlCommand komut = new SqlCommand("insert into sepet(tc,adsoyad,telefon,barkodno,miktari,urunadi,satisfiyati,toplamfiyat,tarih) values(@tc,@adsoyad,@telefon,@barkodno,@miktari,@urunadi,@satisfiyati,@toplamfiyat,@tarih) ", baglanti);
                 komut.Parameters.AddWithValue("@tc", txtTc.Text);
                 komut.Parameters.AddWithValue("@adsoyad", txtAdSoyad.Text);
                 komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
                 komut.Parameters.AddWithValue("@barkodno", txtBarkod.Text);
+                komut.Parameters.AddWithValue("@miktari", int.Parse(txtMiktari.Text));
                 komut.Parameters.AddWithValue("@urunadi", txtUrunAdi.Text);
                 komut.Parameters.AddWithValue("@satisfiyati", double.Parse(txtSatisFiyati.Text));
-                komut.Parameters.AddWithValue("@tarih", DateTime.Now.ToString());
+                komut.Parameters.AddWithValue("@toplamfiyat", double.Parse(txtToplamFiyati.Text));
+                komut.Parameters.AddWithValue("@tarih", DateTime.Now.ToString()); 
                 komut.ExecuteNonQuery();
                 baglanti.Close();
             }
             else
             {
                 baglanti.Open();
-                SqlCommand komut2 = new SqlCommand("update sepet", baglanti);
+                SqlCommand komut2 = new SqlCommand("update sepet set miktari = miktari+'"+int.Parse(txtMiktari.Text)+ "'  where barkodno='" + txtBarkod.Text + "'", baglanti);
                 komut2.ExecuteNonQuery();
+                SqlCommand komut3 = new SqlCommand("update sepet set toplamfiyat = miktari*satisfiyati where barkodno='"+txtBarkod.Text+"'", baglanti);
+                komut3.ExecuteNonQuery();
                 baglanti.Close();
             }
 
@@ -168,7 +172,7 @@ namespace Market_Satis
             {
                 if (item is TextBox)
                 {
-                    if (true)
+                    if (item!=txtMiktari)
                     {
                         item.Text = "";
                     }
@@ -198,6 +202,32 @@ namespace Market_Satis
             MessageBox.Show("Urünler sepetten cikarildi");
             daset.Tables["sepet"].Clear();
             sepetlistele();
+        }
+
+        private void txtMiktari_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txtToplamFiyati.Text = (double.Parse(txtMiktari.Text) * double.Parse(txtSatisFiyati.Text)).ToString();
+            }
+            catch(Exception)
+            {
+                ;
+            }
+
+        }
+
+        private void txtSatisFiyati_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txtToplamFiyati.Text = (double.Parse(txtMiktari.Text) * double.Parse(txtSatisFiyati.Text)).ToString();
+            }
+            catch (Exception)
+            {
+                ;
+            }
+    
         }
     }
 }
