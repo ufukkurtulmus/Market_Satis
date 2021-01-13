@@ -54,6 +54,14 @@ namespace Market_Satis
         private void frmUrunEkleme_Load(object sender, EventArgs e)
         {
             kategorigetir();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select *from kategoribilgileri", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                comboKategori.Items.Add(read["kategori"].ToString());
+            }
+            baglanti.Close();
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

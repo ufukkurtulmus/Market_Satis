@@ -48,3 +48,4 @@ C:\Users\Vedat\Source\Repos\Market_Satis\obj\Debug\Market_Satis.pdb
 =======
 C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.frmUrunListele.resources
 >>>>>>> Stashed changes
+C:\Users\ufuk_\source\repos\Market_Satis\obj\Debug\Market_Satis.frmSatisListele.resources

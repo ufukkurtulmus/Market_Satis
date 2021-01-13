@@ -70,6 +70,20 @@ namespace Market_Satis
             frmUrunListele listele = new frmUrunListele();
             listele.ShowDialog();
         }
+        private void hesapla()
+        {
+            try
+            {
+                baglanti.Open();
+                SqlCommand komut = new SqlCommand("select sum(toplamfiyat) from sepet", baglanti);
+                GenelToplam.Text = komut.ExecuteScalar() + "TL" ;
+                baglanti.Close();
+            }
+            catch
+            {
+                ;
+            }
+        }
 
         private void txtTc_TextChanged(object sender, EventArgs e)
         {
@@ -165,9 +179,10 @@ namespace Market_Satis
                 komut3.ExecuteNonQuery();
                 baglanti.Close();
             }
-
+            txtMiktari.Text = "1";
             daset.Tables["sepet"].Clear();
             sepetlistele();
+            hesapla();
             foreach (Control item in groupBox2.Controls)
             {
                 if (item is TextBox)
@@ -191,6 +206,7 @@ namespace Market_Satis
             MessageBox.Show("Urünler sepetten cikarildi");
             daset.Tables["sepet"].Clear();
             sepetlistele();
+            hesapla();
         }
         
         private void btnSatisIptal_Click(object sender, EventArgs e)
@@ -202,6 +218,7 @@ namespace Market_Satis
             MessageBox.Show("Urünler sepetten cikarildi");
             daset.Tables["sepet"].Clear();
             sepetlistele();
+            hesapla();
         }
 
         private void txtMiktari_TextChanged(object sender, EventArgs e)
@@ -228,6 +245,55 @@ namespace Market_Satis
                 ;
             }
     
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmSatisListele listele = new frmSatisListele();
+            listele.ShowDialog();
+
+        }
+
+        private void btnSatisYap_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                for (int i = 0; 1 < dataGridView1.Rows.Count - 1; i++)
+                {
+                    baglanti.Open();
+                    SqlCommand komut = new SqlCommand("insert into satis(tc,adsoyad,telefon,barkodno,miktari,urunadi,satisfiyati,toplamfiyat,tarih) values(@tc,@adsoyad,@telefon,@barkodno,@miktari,@urunadi,@satisfiyati,@toplamfiyat,@tarih) ", baglanti);
+                    komut.Parameters.AddWithValue("@tc", txtTc.Text);
+                    komut.Parameters.AddWithValue("@adsoyad", txtAdSoyad.Text);
+                    komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
+                    komut.Parameters.AddWithValue("@barkodno", dataGridView1.Rows[i].Cells["barkodno"].Value.ToString());
+                    komut.Parameters.AddWithValue("@miktari", int.Parse(dataGridView1.Rows[i].Cells["miktari"].Value.ToString()));
+                    komut.Parameters.AddWithValue("@urunadi", dataGridView1.Rows[i].Cells["urunadi"].Value.ToString());
+                    komut.Parameters.AddWithValue("@satisfiyati", double.Parse(dataGridView1.Rows[i].Cells["satisfiyati"].Value.ToString()));
+                    komut.Parameters.AddWithValue("@toplamfiyat", double.Parse(dataGridView1.Rows[i].Cells["toplamfiyat"].Value.ToString()));
+                    komut.Parameters.AddWithValue("@tarih", DateTime.Now.ToString());
+                    komut.ExecuteNonQuery();
+                    SqlCommand komut2 = new SqlCommand("update urun set miktari=miktari-'" + int.Parse(dataGridView1.Rows[i].Cells["miktari"].Value.ToString()) + "'where barkodno='" + dataGridView1.Rows[i].Cells["barkodno"].Value.ToString() + "'", baglanti);
+                    komut2.ExecuteNonQuery();
+                    baglanti.Close();
+                }
+                baglanti.Open();
+                SqlCommand komut3 = new SqlCommand("delete from sepet ", baglanti);
+                komut3.ExecuteNonQuery();
+                baglanti.Close();
+                daset.Tables["sepet"].Clear();
+                sepetlistele();
+                hesapla();
+
+            }
+
+            catch (Exception ee)
+           {
+                MessageBox.Show(ee.Message);
+                MessageBox.Show("Bilgiler eksik");
+                baglanti.Close();
+            }
+           
         }
     }
 }

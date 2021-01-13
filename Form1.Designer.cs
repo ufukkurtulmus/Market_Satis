@@ -31,6 +31,10 @@ namespace Market_Satis
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtToplamFiyati = new System.Windows.Forms.TextBox();
+            this.txtMiktari = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtSatisFiyati = new System.Windows.Forms.TextBox();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.txtBarkod = new System.Windows.Forms.TextBox();
@@ -55,10 +59,7 @@ namespace Market_Satis
             this.btnSatisIptal = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtMiktari = new System.Windows.Forms.TextBox();
-            this.txtToplamFiyati = new System.Windows.Forms.TextBox();
+            this.GenelToplam = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -91,6 +92,41 @@ namespace Market_Satis
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
+            // 
+            // txtToplamFiyati
+            // 
+            this.txtToplamFiyati.Location = new System.Drawing.Point(296, 42);
+            this.txtToplamFiyati.Name = "txtToplamFiyati";
+            this.txtToplamFiyati.Size = new System.Drawing.Size(100, 20);
+            this.txtToplamFiyati.TabIndex = 9;
+            // 
+            // txtMiktari
+            // 
+            this.txtMiktari.Location = new System.Drawing.Point(296, 13);
+            this.txtMiktari.Name = "txtMiktari";
+            this.txtMiktari.Size = new System.Drawing.Size(100, 20);
+            this.txtMiktari.TabIndex = 8;
+            this.txtMiktari.Text = "1";
+            this.txtMiktari.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMiktari.TextChanged += new System.EventHandler(this.txtMiktari_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(214, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Toplam Fiyat  :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(216, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Miktarı           :";
             // 
             // txtSatisFiyati
             // 
@@ -254,6 +290,7 @@ namespace Market_Satis
             this.button5.TabIndex = 7;
             this.button5.Text = "Satılan Ürünler";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnEkle
             // 
@@ -273,6 +310,7 @@ namespace Market_Satis
             this.btnSatisYap.TabIndex = 9;
             this.btnSatisYap.Text = "Satış Yap";
             this.btnSatisYap.UseVisualStyleBackColor = true;
+            this.btnSatisYap.Click += new System.EventHandler(this.btnSatisYap_Click);
             // 
             // btnSil
             // 
@@ -314,40 +352,14 @@ namespace Market_Satis
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // label7
+            // GenelToplam
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(216, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Miktarı           :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(214, 42);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Toplam Fiyat  :";
-            // 
-            // txtMiktari
-            // 
-            this.txtMiktari.Location = new System.Drawing.Point(296, 13);
-            this.txtMiktari.Name = "txtMiktari";
-            this.txtMiktari.Size = new System.Drawing.Size(100, 20);
-            this.txtMiktari.TabIndex = 8;
-            this.txtMiktari.Text = "1";
-            this.txtMiktari.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMiktari.TextChanged += new System.EventHandler(this.txtMiktari_TextChanged);
-            // 
-            // txtToplamFiyati
-            // 
-            this.txtToplamFiyati.Location = new System.Drawing.Point(296, 42);
-            this.txtToplamFiyati.Name = "txtToplamFiyati";
-            this.txtToplamFiyati.Size = new System.Drawing.Size(100, 20);
-            this.txtToplamFiyati.TabIndex = 9;
+            this.GenelToplam.AutoSize = true;
+            this.GenelToplam.Location = new System.Drawing.Point(553, 326);
+            this.GenelToplam.Name = "GenelToplam";
+            this.GenelToplam.Size = new System.Drawing.Size(73, 13);
+            this.GenelToplam.TabIndex = 14;
+            this.GenelToplam.Text = "Genel Toplam";
             // 
             // Form1
             // 
@@ -355,6 +367,7 @@ namespace Market_Satis
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GenelToplam);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.btnSatisIptal);
@@ -378,6 +391,7 @@ namespace Market_Satis
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -413,6 +427,7 @@ namespace Market_Satis
         private System.Windows.Forms.TextBox txtMiktari;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label GenelToplam;
     }
 }
 

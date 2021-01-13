@@ -59,7 +59,7 @@ namespace Market_Satis
             comboBox1.Text = "";
            
         }
-        private void kategorigetir() 
+        public void kategorigetir() 
         {    
             baglanti.Open();
             SqlCommand komut = new SqlCommand("select *from kategoribilgileri", baglanti);
@@ -73,6 +73,11 @@ namespace Market_Satis
         private void frmMarka_Load(object sender, EventArgs e)
         {
             kategorigetir();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
