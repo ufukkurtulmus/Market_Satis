@@ -92,7 +92,7 @@ namespace Market_Satis
         {
             DataTable tablo = new DataTable();
             baglanti.Open();
-            SqlDataAdapter adtr = new SqlDataAdapter("select *from urun where barkodno like '%" + txtBarkodNoAra.Text + "%'", baglanti);
+            SqlDataAdapter adtr = new SqlDataAdapter("select *from urun where barkodno like '%" + textBox1.Text + "%'", baglanti);
             adtr.Fill(tablo);
             dataGridView1.DataSource = tablo;
             baglanti.Close();

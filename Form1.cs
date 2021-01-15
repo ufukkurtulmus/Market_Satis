@@ -276,6 +276,7 @@ namespace Market_Satis
                     SqlCommand komut2 = new SqlCommand("update urun set miktari=miktari-'" + int.Parse(dataGridView1.Rows[i].Cells["miktari"].Value.ToString()) + "'where barkodno='" + dataGridView1.Rows[i].Cells["barkodno"].Value.ToString() + "'", baglanti);
                     komut2.ExecuteNonQuery();
                     baglanti.Close();
+
                 }
                 baglanti.Open();
                 SqlCommand komut3 = new SqlCommand("delete from sepet ", baglanti);
@@ -284,6 +285,7 @@ namespace Market_Satis
                 daset.Tables["sepet"].Clear();
                 sepetlistele();
                 hesapla();
+                MessageBox.Show("Satış Gerçekleştirildi.");
 
             }
 
